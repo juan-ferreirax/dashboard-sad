@@ -1,0 +1,6 @@
+.venv
+build
+dist
+dados_mercado_imobiliario_consolidados.xlsx
+Dashboard SAD
+Dashboard SAD.spec
