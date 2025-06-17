@@ -5,15 +5,25 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd
+import os
 
 # --- 1. CARREGAMENTO E PREPARAÇÃO DOS DADOS ---
+import os
+
+# --- 1. CARREGAMENTO E PREPARAÇÃO DOS DADOS ---
+# Constrói o caminho absoluto para o arquivo de dados
+# Isso garante que o servidor sempre encontre o arquivo, não importa de onde o script é executado.
+caminho_script = os.path.dirname(os.path.abspath(__file__))
+caminho_csv = os.path.join(caminho_script, 'dados_mercado_imobiliario_consolidados.csv')
+
 try:
-    df = pd.read_csv("dados_mercado_imobiliario_consolidados.csv")
+    df = pd.read_csv(caminho_csv)
     df['DATE'] = pd.to_datetime(df['DATE'])
     df['Periodo'] = df['DATE'].dt.to_period('Q').astype(str)
 except FileNotFoundError:
-    print("ERRO: O arquivo 'dados_mercado_imobiliario_consolidados.csv' não foi encontrado.")
-    exit()
+    # Esta mensagem agora aparecerá no seu log de erros se algo der errado
+    print(f"ERRO: O arquivo CSV não foi encontrado no caminho: {caminho_csv}")
+    # Não use exit() em um app web, apenas deixe o erro acontecer para podermos vê-lo.
 
 # --- 2. INICIALIZAÇÃO E LAYOUT DO DASHBOARD ---
 app = dash.Dash(__name__)
