@@ -8,9 +8,6 @@ import pandas as pd
 import os
 
 # --- 1. CARREGAMENTO E PREPARAÇÃO DOS DADOS ---
-import os
-
-# --- 1. CARREGAMENTO E PREPARAÇÃO DOS DADOS ---
 # Constrói o caminho absoluto para o arquivo de dados
 # Isso garante que o servidor sempre encontre o arquivo, não importa de onde o script é executado.
 caminho_script = os.path.dirname(os.path.abspath(__file__))
