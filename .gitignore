@@ -3,4 +3,5 @@ build
 dist
 dados_mercado_imobiliario_consolidados.xlsx
 Dashboard SAD
+Dashboard SAD.py
 Dashboard SAD.spec
