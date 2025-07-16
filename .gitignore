@@ -1,7 +1,10 @@
 .venv
 build
 dist
+.gitignore
 dados_mercado_imobiliario_consolidados.xlsx
 Dashboard SAD
-Dashboard SAD.py
 Dashboard SAD.spec
+dashboard_sad.py
+Procfile
+requirements.txt
