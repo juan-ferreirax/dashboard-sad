@@ -9,3 +9,12 @@ O uso é simples:
 * A segunda aba mostra gráficos fixos para uma análise cruzada observando fatores e comportamentos que indicariam um estouro iminente.
 
 * A versão hospedada dessa aplicação está disponível no serviço de hospedagem Render através do link <https://dashboard-imobiliario-6asu.onrender.com/>, devido as limitações da versão gratuita, talvez seja necessário aguardar de 30 a 60 segundos para o carregamento da aplicação. Desde já agradeço a compreensão!
+
+**Tecnologias utilizadas:**
+
+**Python:** Linguagem de programação base do projeto.  
+**Dash**: Framework Python para criação de dashboards web interativos.  
+**Plotly:** Biblioteca para geração de gráficos interativos.  
+**Pandas:** Biblioteca para manipulação e análise de dados.  
+**Gunicorn:** Servidor WSGI para deploy do app no Render(usado no Procfile).  
+**HTML/CSS:** Para estrutura e estilização do dashboard(utilizado via componentes do Dash).  
